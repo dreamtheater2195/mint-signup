@@ -1,0 +1,343 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+header, #form-div{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  width: 690px;
+  padding-top: 35px;
+  height:74px;
+  position: relative;
+}
+
+#mint-logo {
+  display: inline;
+  float:left;
+  margin-bottom: 15px;
+}
+
+#options {
+  diplay: block;
+  position:absolute;
+  bottom:0;
+  right:0;
+  margin-bottom: 5px;
+}
+
+#options li {
+  display:inline;
+  width:auto;
+  height:auto;
+  padding: 0 14px;
+  font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: rgb(38, 44, 38);
+}
+
+#options a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#signup {
+    font-weight: bold;
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#form-div {
+  background-color: white;
+  background-color: white;
+  width: 590px;
+  height: 648px;
+  padding: 43px 50px 50px 50px;
+  clear: both;
+  box-shadow:         rgba(0, 0, 0, 0.2) 1px 3px 8px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 3px 8px 0px;
+}
+
+#form-header h1 {
+  font-size: 28px;
+  font-family: "AvenirLTStd-Heavy", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+#left-column {
+  float:left;
+  display: inline-block;
+  width: 350px;
+}
+
+#left-column li {
+  height: 75px;
+  width: 350px;
+}
+
+#left-column label {
+  display: block;
+  font-size: 14px;
+  height: 24px;
+  width: 350px;
+  padding-bottom: 5px;
+}
+
+#left-column input {
+    border: 1px solid rgb(204, 204, 204);
+    padding: 2px;
+    height: 24px;
+    width: 260px;
+    color: rgb(102, 102, 102);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.098) 0 1px 1px 0 inset;
+}
+
+#left-column select {
+  width: 270px;
+  height: 30px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding-left: 5px;
+  font-size: 14px;
+  color: #666;
+  padding: 2px;
+}
+
+#form-agree {
+  display: none;
+}
+.termsCheckbox span {
+  height: 10px;
+  width: 10px;
+  border: 1px solid grey;
+  display: inline-block;
+  position: relative;
+}
+
+[type=checkbox]:checked + span:before {/* <-- style its checked state..with a ticked icon */
+  content: '\2714';
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.termsCheckbox label {
+  color: rgb(102, 102, 102);
+  font-size: 13px;
+  font-weight: normal;
+  display: inline;
+}
+
+.termsCheckbox a {
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(0, 110, 164);
+}
+
+.btn-primary {
+    color: white;
+    background: #45cae6;
+}
+
+.btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    border: none;
+    font-family: "AvenirNext-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 13px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #f7f7f7;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+    color: #666;
+    padding: 13px 20px 11px 20px;
+    font-size: 13px;
+    text-decoration: none !important;
+    margin: 0;
+    min-width: 85px;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+#right-column {
+  border-left: solid 1px #D3D3D3;
+  float:right;
+  width: auto;
+  height: 528px;
+}
+
+#right-content {
+  background-color: #f5f5f5;
+  margin-left: 25px;
+  padding: 21px 17px 19px 40px;
+  height: 140px;
+  width: 150px;
+  color: rgb(102, 102, 102);
+}
+
+#right-column h2 {
+  font-size: 20px;
+  color: #666;
+  font-weight: 500;
+  margin: 0 0 0 -15px;
+}
+
+#right-content ul {
+  list-style: disc;
+  font-size: 12px;
+  height: 28px;
+  padding: 0;
+}
+#right-content li {
+    height: 28px;
+    line-height: 14px;
+    font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif;
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+#right-content a {
+    text-decoration: underline;
+}
+
+footer {
+  width: 690px;
+  margin: 0 auto 25px auto;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+#footer-links {
+  color: rgb(102, 102, 102);
+  padding: 20px 0 25px 0;
+}
+
+#footer-links ul {
+    margin: 0 auto;
+    display: inline;
+}
+
+#footer-links li {
+    border-left: 1px solid #D3D3D3;
+    display: inline;
+    padding: 0 12px 0 12px;
+}
+
+#footer-links li:first-child {
+  border-left: 0;
+}
+
+#footer-links a:hover {
+  color: #a5a5a5;
+  text-decoration: underline;
+}
+
+#footer-links a {
+  color: #a5a5a5;
+  text-decoration: none;
+}
+
+#footer-logos {
+    clear: both;
+    padding-bottom: 20px;
+}
+
+#norton-logo {
+    background-image: url("https://images.mint.com/web-client/images/security-sd9c123b13c.png");
+    background-position: 0 -68px;
+    height: 58px;
+    width: 124px;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+#truste-logo {
+    background-image: url("https://images.mint.com/web-client/images/security-sd9c123b13c.png");
+    background-position: 0 0;
+    height: 68px;
+    width: 124px;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+#finalfooter span {
+  color: #a5a5a5;
+  font-size: 11px;
+  padding: 3px 4px;
+}
+
+#copyright {
+  border-right: 1px solid #D3D3D3;
+}
