@@ -8,7 +8,60 @@
   </head>
 
   <body>
+    <script>
+      function validateForm() {
+        var x = 0;
+        var email1 = document.forms["myForm"]["email1"].value;
+        var email2 = document.forms["myForm"]["email2"].value;
+        var zipcode = document.forms["myForm"]["zipcode"].value;
+        var password = document.forms["myForm"]["password"].value;
+        var password2 = document.forms["myForm"]["password2"].value;
+        if (email1 == null || email1 == "") {
+          alert("Email must be filled out");
+          x++;
+        }
 
+        if (email2 == null || email2 == "") {
+          alert("Confirmation email must be filled out");
+          x++;
+        }
+
+        if (zipcode == null || zipcode == "") {
+          alert("Zipcode must be filled out");
+          x++;
+        }
+
+        if (password == null || password == "") {
+          alert("Password field must not be empty");
+          x++;
+        }
+
+        if (password2 == null || password2 == "") {
+          alert("Password confirmation field must not be empty");
+          x++;
+        }
+
+        if (x > 0) {
+          return false;
+        }
+      }
+      function confirmEmail() {
+        var email = document.forms["myForm"]["email1"].value;
+        var confirmEmail = document.forms["myForm"]["email2"].value;
+        if (email != confirmEmail) {
+          alert("Email not matching!");
+          document.getElementById("form-signup-username-confirm").value = null;
+        }
+      }
+      function confirmPassword() {
+        var password = document.forms["myForm"]["password"].value;
+        var password2 = document.forms["myForm"]["password2"].value;
+        if (password != password2) {
+          alert("Password not matching!");
+          document.getElementById("form-signup-password-confirm").value = null;
+        }
+      }
+    </script>
     <header>
       <div id="mint-logo">
        <a href="https://www.mint.com/">
@@ -30,16 +83,16 @@
         <h1>Create a new account</h1>
       </div>
       <div id="left-column">
-        <form id="form-signup" method="post" action="#">
+        <form id="form-signup" name="myForm" method="post" action="#" onsubmit="return validateForm()">
           <ol>
             <li class="email1">
               <label>Your Email</label>
-              <input id="form-signup-username" name="email" maxlength="255" type="text">
+              <input id="form-signup-username" name="email1" maxlength="255" type="email">
             </li>
 
             <li class="email2">
               <label>Confirm Email</label>
-              <input id="form-signup-username-confirm" name="email2" maxlength="255" type="text">
+              <input id="form-signup-username-confirm" name="email2" maxlength="255" type="email" onblur="confirmEmail()">
             </li>
 
             <li>
@@ -57,24 +110,24 @@
 
             <li class="password">
               <label>Password</label>
-              <input id="form-signup-password" name="password" type="password" autocomplete="off" maxlength="32" value="">
+              <input id="form-signup-password" name="password" type="password" autocomplete="off" maxlength="32" value="" pattern=".{8,}">
             </li>
 
             <li class="password2">
 				      <label>Confirm Password</label>
-				      <input id="form-signup-password-confirm" name="password2" type="password" autocomplete="off" maxlength="32" value="">
+				      <input id="form-signup-password-confirm" name="password2" type="password" autocomplete="off" maxlength="32" value="" pattern=".{8,}" onblur="confirmPassword()">
 			      </li>
 
             <li class="termsCheckbox">
 				      <label>
-                <input type="checkbox" id="form-agree">
+                <input type="checkbox" id="form-agree" name="checkbox">
                 <span></span>
                 Yes, I agree to the Mint <a href="https://www.mint.com/how-it-works/security/terms/" target="_blank">Terms of Use</a>.
               </label>
 			      </li>
           </ol>
 
-          <input type="submit" class="btn btn-primary signup-submit" value="Sign up">
+          <input type="submit" class="btn btn-primary signup-submit" value="Sign up" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}">
         </form>
       </div>
 
