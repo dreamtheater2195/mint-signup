@@ -110,7 +110,7 @@ ul {
   background-color: white;
   background-color: white;
   width: 590px;
-  height: 648px;
+  height: 680px;
   padding: 43px 50px 50px 50px;
   clear: both;
   box-shadow:         rgba(0, 0, 0, 0.2) 1px 3px 8px 0;
@@ -133,7 +133,7 @@ ul {
 }
 
 #left-column li {
-  height: 75px;
+  height: 90px;
   width: 350px;
 }
 
@@ -168,6 +168,7 @@ ul {
 #form-agree {
   display: none;
 }
+
 .termsCheckbox span {
   height: 10px;
   width: 10px;
@@ -340,4 +341,27 @@ footer {
 
 #copyright {
   border-right: 1px solid #D3D3D3;
+}
+
+#form-signup li {
+  position: relative;
+}
+
+#form-signup label.error {
+  color: #bd1a00;
+  font: 200 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  bottom: -5px;
+}
+
+#form-div input.error {
+  border-color: #bd1a00;
+}
+
+.submit-error {
+  color: #bd1a00;
+  font-weight: bold;
+  position: absolute;
+  top: 210px;
+  display: none;
 }

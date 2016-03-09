@@ -118,13 +118,6 @@
 				      <input id="form-signup-password-confirm" name="password2" type="password" autocomplete="off" maxlength="32" value="" pattern=".{8,}" onblur="confirmPassword()">
 			      </li>
 
-            <li class="termsCheckbox">
-				      <label>
-                <input type="checkbox" id="form-agree" name="checkbox">
-                <span></span>
-                Yes, I agree to the Mint <a href="https://www.mint.com/how-it-works/security/terms/" target="_blank">Terms of Use</a>.
-              </label>
-			      </li>
           </ol>
 
           <input type="submit" class="btn btn-primary signup-submit" value="Sign up" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}">
